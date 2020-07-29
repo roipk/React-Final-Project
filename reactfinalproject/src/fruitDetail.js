@@ -1,20 +1,11 @@
-import {React,Component} from 'react';
+import React from 'react';
 
 
-class FruitDetail extends Component{
-
-
-
-
-
-   render(){
-
-    return(<h1>hey!</h1>)
+class FruitDetail extends React.Component {
+   render() {
+     return <h1>Hello</h1>;
    }
-
-
-
-}
+ }
 
 export default FruitDetail;
 
