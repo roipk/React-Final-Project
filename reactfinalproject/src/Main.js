@@ -43,7 +43,7 @@ class Main extends React.Component{
                     <Card.Title>{object.name}</Card.Title>
                   
                     <Link to={{ 
-                       pathname:`/FruitDetail/${object.name}`, 
+                       pathname:`/ProductDetail/${object.name}`, 
                        state: object }}>
                         <Button>Details</Button>
                     </Link>

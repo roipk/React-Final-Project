@@ -2,13 +2,13 @@ import React from 'react';
 import {Table} from 'react-bootstrap'
 
 
-class FruitDetail extends React.Component {
+class ProductDetail extends React.Component {
    render() {
   console.log(this.props.location.state)
  
      return (
        <div>
-         <h1>Hello {this.props.match.params.name}</h1>
+         <h1>{this.props.match.params.name}</h1>
          <Table striped bordered hover>
          <thead>
            <tr>
@@ -33,5 +33,5 @@ class FruitDetail extends React.Component {
    }
  }
 
-export default FruitDetail;
+export default ProductDetail;
 

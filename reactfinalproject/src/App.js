@@ -6,7 +6,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import FruitDetail from './fruitDetail'
+import ProductDetail from './productDetail'
 
 class App extends React.Component{
 render(){
@@ -15,7 +15,7 @@ render(){
      <div className="App">
        <Switch>
          <Route path="/" exact component={Main} />
-         <Route path='/FruitDetail/:name' component={FruitDetail} />
+         <Route path='/ProductDetail/:name' component={ProductDetail} />
        </Switch>
      </div>
    </Router>
