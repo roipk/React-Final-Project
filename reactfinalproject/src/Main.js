@@ -35,8 +35,8 @@ class Main extends React.Component{
             <div key={object.name} >
              
               <Card bg="dark" style={{ width: '14%',height:'50%' ,position:'absolute',left:`${object.positionX}%`,top:`${object.positionTOP+5}%`}}>
-                <Card.Img variant="top" src={object.image} width="100" height="100"/>
-                  <Card.Body >
+                <Card.Img variant="top" src={object.image} style={{width: '100%',height:'50%' }}/>
+                  <Card.Body  >
                     <Card.Title>{object.name}</Card.Title>
                     <Card.Text>
                      {object.description}
