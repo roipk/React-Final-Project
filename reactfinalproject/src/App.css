@@ -1,7 +1,14 @@
 .App {
   text-align: center;
+  background-color: cornflowerblue;
+ 
 }
-
+.asd{
+  background-color: cornflowerblue;
+}
+.Router{
+  background-color: cornflowerblue;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

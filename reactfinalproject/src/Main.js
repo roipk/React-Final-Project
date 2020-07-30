@@ -3,13 +3,16 @@ import React from 'react';
 import FirebaseFunction from './firebaseFunction'
 import {Card,Button} from 'react-bootstrap'
 import { Link } from "react-router-dom";
+import './Main.css'
+import 'bootstrap/dist/css/bootstrap.css';
 
 class Main extends React.Component{
 
     constructor(){
         super();
         this.state = {
-            arrayOfObject:[]
+            arrayOfObject:[],
+            positionX:0
         }
     }
 
@@ -19,15 +22,19 @@ class Main extends React.Component{
 
     render()
     {
+   
         console.log(this.state.arrayOfObject)
         return(
-         <div className="main" >
-        
+          <div >
+         <div style={{color: "red"}} >
+           <h1 style={{color:'black',fontWeight:'bold'}}>List Of Grocery</h1>
            <FirebaseFunction arrayOfObject={this.acceptArrayOfObject.bind(this)}/>
          
            {this.state.arrayOfObject.map(object => (
+            
             <div key={object.name} >
-              <Card border="primary" style={{ width: '18rem' ,position:'absolute',left:`${object.positionX}%`,top:`${object.positionTOP}%`}}>
+             
+              <Card bg="dark" style={{ width: '10rem' ,position:'absolute',left:`${object.positionX}%`,top:`${object.positionTOP+5}%`}}>
                 <Card.Img variant="top" src={object.image} width="100" height="100"/>
                   <Card.Body >
                     <Card.Title>{object.name}</Card.Title>
@@ -40,10 +47,11 @@ class Main extends React.Component{
                   </Card.Body>
              </Card>
            </div>
+          
            ))}
 
          </div>
-       
+         </div>
       
         );
     }

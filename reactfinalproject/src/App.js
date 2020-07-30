@@ -11,8 +11,8 @@ import FruitDetail from './fruitDetail'
 class App extends React.Component{
 render(){
   return(
-    <Router>
-     <div>
+    <Router >
+     <div className="App">
        <Switch>
          <Route path="/" exact component={Main} />
          <Route path='/FruitDetail/:name' component={FruitDetail} />
