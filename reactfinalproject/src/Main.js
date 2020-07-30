@@ -29,8 +29,8 @@ class Main extends React.Component{
         
           <div >
             
-         <div style={{color: "red"}} >
-           <h1 style={{color:'black',fontWeight:'bold'}}>Grocery List</h1>
+         <div style={{color: "Aquamarine"}} >
+           <h1 style={{color:'Chartreuse',fontWeight:'bold'}}>Grocery List</h1>
            <FirebaseFunction arrayOfObject={this.acceptArrayOfObject.bind(this)}/>
          
            {this.state.arrayOfObject.map(object => (
