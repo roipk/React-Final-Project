@@ -6,6 +6,8 @@ import db from './firebase'
 
 class FirebaseFunction extends Component{
 
+
+
   async componentDidMount(){
     db.collection('times')
     .get()
