@@ -2,6 +2,7 @@
 import React from 'react';
 import FirebaseFunction from './firebaseFunction'
 import {Card,Button} from 'react-bootstrap'
+import { Link } from "react-router-dom";
 
 class Main extends React.Component{
 
@@ -33,7 +34,9 @@ class Main extends React.Component{
                     <Card.Text>
                      {object.description}
                     </Card.Text>
+                      <Link to={`/FruitDetail/${object.name}`}>
                          <Button>Details</Button>
+                      </Link>
                   </Card.Body>
              </Card>
            </div>
