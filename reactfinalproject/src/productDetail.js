@@ -8,22 +8,22 @@ class ProductDetail extends React.Component {
  
      return (
        <div>
-         <h1>{this.props.match.params.name}</h1>
-         <Table striped bordered hover>
+         <h1 style={{fontWeight:'bold'}}>{this.props.match.params.name}</h1>
+         <Table bordered variant="dark" >
          <thead>
            <tr>
-            <th>#</th>
-            <th>Product Name</th>
-            <th>Description</th>
-           < th>Image</th>
+            <th  style={{textAlign:'center',verticalAlign:'middle'}}>#</th>
+            <th  style={{textAlign:'center',verticalAlign:'middle'}}>Product Name</th>
+            <th  style={{textAlign:'center',verticalAlign:'middle'}}>Description</th>
+           < th  style={{textAlign:'center',verticalAlign:'middle'}}>Image</th>
           </tr>
          </thead>
-          <tbody>
+          <tbody hover>
            <tr>
            <td></td>
-            <td>{this.props.location.state.name}</td>
-            <td>{this.props.location.state.description}</td>
-            <td><img src={this.props.location.state.image} alt="true"/></td>
+            <td style={{textAlign:'center',verticalAlign:'middle'}}>{this.props.location.state.name}</td>
+            <td style={{textAlign:'center',verticalAlign:'middle'}}>{this.props.location.state.description}</td>
+            <td style={{textAlign:'center',verticalAlign:'middle'}}><img src={this.props.location.state.image} alt="true"/></td>
            
           </tr>
         </tbody>

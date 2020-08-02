@@ -29,8 +29,8 @@ class Main extends React.Component{
         
           <div >
             
-         <div style={{color: "Aquamarine"}} >
-           <h1 style={{color:'Chartreuse',fontWeight:'bold'}}>Grocery List</h1>
+         <div >
+           <h1 style={{color:'black',fontWeight:'bold'}}>Grocery List</h1>
            <FirebaseFunction arrayOfObject={this.acceptArrayOfObject.bind(this)}/>
          
            {this.state.arrayOfObject.map(object => (
@@ -40,7 +40,7 @@ class Main extends React.Component{
               <Card bg="dark" style={{ width: '14%',height:'50%' ,position:'absolute',left:`${object.positionX}%`,top:`${object.positionTOP+5}%`}}>
                 <Card.Img variant="top" src={object.image} style={{width: '100%',height:'50%' }}/>
                   <Card.Body  >
-                    <Card.Title>{object.name}</Card.Title>
+                    <Card.Title style={{color:'white'}}>{object.name}</Card.Title>
                   
                     <Link to={{ 
                        pathname:`/ProductDetail/${object.name}`, 
