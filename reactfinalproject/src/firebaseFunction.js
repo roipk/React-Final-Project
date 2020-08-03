@@ -1,12 +1,8 @@
 import { Component } from 'react';
-
 import './App.css';
 import db from './firebase'
 
-
 class FirebaseFunction extends Component{
-
-
 
   async componentDidMount(){
     db.collection('times')
@@ -23,8 +19,6 @@ class FirebaseFunction extends Component{
   render(){
    return '';
   }
-
-
 }
 
 export default FirebaseFunction;

@@ -1,7 +1,6 @@
 import React from 'react';
 import {Table} from 'react-bootstrap'
 
-
 class ProductDetail extends React.Component {
    render() {
   console.log(this.props.location.state)
@@ -34,4 +33,3 @@ class ProductDetail extends React.Component {
  }
 
 export default ProductDetail;
-
