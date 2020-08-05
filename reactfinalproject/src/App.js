@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import ProductDetail from './productDetail'
 import {Dropdown} from 'react-bootstrap'
+import ScrollToTop from './ScrollToTop';
 
 class App extends React.Component{
    
@@ -22,7 +23,7 @@ class App extends React.Component{
 	changeBackgroundColor = (e) =>{
 		this.setState({backGroundColor:e})
 	}
-
+	 
 	render(){
 		return(
 			<div>
@@ -30,7 +31,6 @@ class App extends React.Component{
 					<div className="App" style={{backgroundColor:this.state.backGroundColor}}>
 						<Dropdown style={{position:'absolute',left:'5%',top:'2%'}}>
 							<Dropdown.Toggle variant="success" id="dropdown-basic">Change Background Color</Dropdown.Toggle>
-
 							<Dropdown.Menu>
 								<Dropdown.Item onClick={() => this.changeBackgroundColor("#62bdeb17")}>Gray</Dropdown.Item>
 								<Dropdown.Item onClick={() => this.changeBackgroundColor("Green")}>Green</Dropdown.Item>
@@ -42,7 +42,7 @@ class App extends React.Component{
 								<Dropdown.Item onClick={() => this.changeBackgroundColor("Ivory")}>ivory</Dropdown.Item>
 							</Dropdown.Menu>
 						</Dropdown>
-						
+						<ScrollToTop />
 						<Switch>
 							<Route path="/" exact component={Main} />
 							<Route path='/ProductDetail/:name' component={ProductDetail} />
